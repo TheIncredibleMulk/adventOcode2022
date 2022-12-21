@@ -12,8 +12,7 @@ func main() {
 
 	var sacks []string
 
-	priorityTable := make(map[string]int)
-	
+	var priorityTable map[string]int
 
 	fmt.Println("advent of code 2022 day 3")
 	fmt.Println("-------------------------------")
@@ -37,7 +36,7 @@ func main() {
 		containers := SplitSubN(v, halfLen)
 		for _, v := range containers[0] {
 			if strings.ContainsRune(containers[1], v) {
-				fmt.Printf(string(v))
+				fmt.Println("items in both compartments: ", string(v))
 			}
 		}
 		fmt.Println()
